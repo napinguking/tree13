@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f6f6f6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.top-logo {
+    width: 170px;
+    height: auto;
+}
+
+
+.login-box {
+    flex: 1;
+    width: 340px;
+    margin: 90px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
+
+.login-logo {
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+.login-box h2 {
+    margin-bottom: 80px;
+    font-size: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input {
+    width: 280px;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    margin: 0 auto;
+    padding-left: 20px;
+    color: #848484;
+    background-color: #fff;
+}
+
+
+
+input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 1px solid #e5e5e5;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #226fc1;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: -4px;
+    left: 4px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    width: 295px;
+    height: auto;
+    margin: 0 auto;
+    color: #848484;
+    padding-bottom: 20px;
+}
+
+.options a {
+    color: #848484;
+}
+
+.checkbox-label {
+    position: relative;
+    top: -4px;
+    left: 10px;
+}
+
+.login-btn {
+    width: 300px;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #0054d1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sns-title {
+    margin: 50px 0 15px;
+    font-size: 13px;
+    color: #333;
+}
+
+.sns-icons img {
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.login-box {
+    width: 90%;
+}
+
+.sns-icons img {
+    width: 48px;
+}
+
+@media (min-width: 700px) {
+    .login-box {
+        width: 700px;
+       margin: 170px auto;
+    }
+    
+  
+
+.login-logo {
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+.login-box h2 {
+    margin-bottom: 80px;
+    font-size: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input {
+    width: 340px;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    margin: 0 auto;
+    padding-left: 20px;
+    color: #848484;
+    background-color: #fff;
+}
+
+
+
+input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 1px solid #e5e5e5;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #226fc1;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: -4px;
+    left: 4px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    width: 360px;
+    height: auto;
+    margin: 0 auto;
+    color: #848484;
+    padding-bottom: 20px;
+}
+
+.options a {
+    color: #848484;
+}
+
+.checkbox-label {
+    position: relative;
+    top: -4px;
+    left: 10px;
+}
+
+.login-btn {
+    width: 360px;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #0054d1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sns-title {
+    margin: 50px 0 15px;
+    font-size: 13px;
+    color: #333;
+}
+
+.sns-icons img {
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.login-box {
+    width: 90%;
+}
+
+.sns-icons img {
+    width: 48px;
+}
+
+}
