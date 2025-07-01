@@ -1,0 +1,594 @@
+@charset"utf-8";
+
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src:  url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+
+
+/* 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR Regular';
+}
+
+body {
+    background-color: pink;
+
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+html.no-scroll,
+body.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+
+header {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 170px;
+    z-index: 10;
+}
+
+header img {
+    width: 100%;
+    vertical-align: top;
+}
+
+#lnb {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #226fc1;
+    z-index: 8;
+    display: none;
+}
+
+.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.bar1 {
+    top: 0;
+}
+
+.deg45 {
+    transform: translateY(13px) rotate(45deg) scaleX(1.3);
+}
+
+.bar2 {
+    top: 13px;
+}
+
+.y90deg {
+    transform: rotateY(90deg);
+}
+
+.bar3 {
+    bottom: 0;
+}
+
+.deg-45 {
+    transform: translateY(-13px) rotate(-45deg) scale(1.3, 1);
+}
+
+
+
+/******* menu *********/
+.menu {
+    position: absolute;
+    left: 20px;
+    width: 60%;
+    height: 60vh;
+    bottom: 0;
+    font-size: 62px;
+    z-index: 7;
+}
+
+.menu li {
+    height: 23%;
+}
+
+
+.menu li a {
+    display: block;
+    height: 100%;
+    font-family: 'FiraSansExtraCondensed-Bold';
+    -webkit-text-stroke: 2px #fff;
+    letter-spacing: 5px;
+    color: transparent;
+    padding: 20px 0;
+}
+
+.menu li a:hover {
+    -webkit-text-stroke: 2px #f4acbb;
+    color: #f4acbb;
+}
+
+
+
+
+.gnb {
+    position: absolute;
+    right: 8px;
+    top: 70px;
+    z-index: 8;
+    text-align: right;
+}
+
+
+.gnb > li {
+    float: left;
+}
+
+.gnb > li > a {
+    display: block;
+    font-size: 16px;
+    font-family: 'digital-7';
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.gnb > li > a:hover {
+    color: #f4acbb;
+}
+
+
+
+
+
+.sns_menu {
+    position: fixed;
+    right: -140px;
+    bottom: 30%;
+    z-index: 8;
+    float: right;
+    transform: rotate(90deg);
+}
+
+
+.sns_menu > li {
+    float: left;
+    margin-left: 20px;
+
+}
+
+.sns_menu > li > a {
+    float: left;
+    margin-left: 20px;
+    font-family: 'digital-7';
+    font-size: 16px;
+    color: #fff;
+}
+
+.sns_menu > li > a:hover {
+    color: #f4acbb;
+}
+
+
+/***** text-block *****/
+.text-block {
+    position: absolute;
+    top: 25%;
+    left: 10px;
+    width: auto;
+    height: 10vh;
+}
+
+.text-block h2 {
+    font-size: 32px;
+    font-family: 'SoukouMincho';
+    color: #fff;
+}
+
+
+
+.text-block p {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
+/****** footer ******/
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-top: 1px solid #3c3c3c;
+}
+
+.footer-logo {
+    width: 170px;
+
+}
+
+footer h2 {
+    height: 10px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+}
+
+.footerBox {
+    display: grid;
+    grid-template-rows: 1fr 1f;
+    width: 360px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.fnb {
+    width: 360px;
+    margin: 0 auto;
+
+}
+
+
+.fnb ul li {
+    float: left;
+    padding: 0 25px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.fnb ul li a {
+    display: block;
+    font-size: 14px;
+    color: #3c3c3c;
+    font-weight: bolder;
+}
+
+.address {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.address ul {
+    float: left;
+    padding-top: 10px;
+}
+
+.address ul li {
+    float: left;
+    padding: 0 15px;
+    line-height: 2.2;
+    font-size: 12px;
+}
+
+.address ul li:nth-child(4),
+.address ul li:nth-child(6) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.address ul li a {
+    font-size: 12px;
+    color: #3c3c3c;
+
+}
+
+address {
+    font-style: normal;
+}
+
+/************************************/
+@media (min-width:700px) {
+     .menu {
+        bottom: 0;
+        left: 20px;
+        width: 60%;
+        font-size: 82px;
+        z-index: 7;
+    }
+    
+    .menu li {
+        height: 25%;
+    }
+
+   .text-block {
+        top: 25%;
+    }
+
+    .text-block h2 {
+        font-size: 48px;
+    }
+
+
+    .text-block p {
+        font-size: 32px;
+    }
+    
+    .gnb {
+    position: absolute;
+    right: 75px;
+    top: 20px;
+    z-index: 8;
+    text-align: right;
+}
+    
+     .gnb li a {
+        font-size: 20px;
+    }
+    
+    .sns_menu {
+      bottom: 23%;
+        
+    }
+    
+    .sns_menu > li > a {
+        font-size: 20px;
+    }
+
+     #footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        margin: 0 auto;
+        border-top: 1px solid #3c3c3c;
+    }
+
+    footer h2 {
+        height: 10px;
+        padding: 0;
+        margin: 55px 40px;
+    }
+
+    .footerBox {
+        display: grid;
+        grid-template-rows: 1fr 1f;
+        height: 140px;
+        line-height: 1.8;
+    }
+
+    .fnb {
+        width: 415px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+
+    .fnb ul li {
+        float: left;
+        padding: 0 25px;
+        margin-bottom: 10px;
+
+    }
+
+    .fnb ul li:nth-child(1) {
+        padding-left: 0;
+    }
+
+
+
+    .fnb ul li a {
+        font-size: 16px;
+
+    }
+
+    .address {
+        width: 450px;
+        height: auto;
+        margin-top: -25px;
+    }
+
+    .address ul {
+        float: left;
+        padding-top: 10px;
+    }
+
+    .address ul li {
+        float: left;
+        padding: 0 15px;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .address ul li:nth-child(4),
+    .address ul li:nth-child(6) {
+        padding-left: 15px;
+    }
+
+    .address ul li a {
+        font-size: 14px;
+        color: #3c3c3c;
+
+    }
+
+    .address ul li {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+
+
+}
+
+/************************************/
+
+
+@media (min-width:1024px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    #lnb {
+        position: absolute;
+        height: 6em;
+        background-color: transparent;
+        display: block;
+    }
+
+    .menu {
+        left: auto;
+        right: 70px;
+        font: 2em/2 '';
+        height: 81px;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    .menu > li > a {
+        display: block;
+        padding: 0;
+        width: 100%;
+        color: #fff;
+        font-family: 'digital-7';
+        -webkit-text-stroke: 0px;
+        font-weight: normal;
+    }
+
+    .menu li a:hover {
+        -webkit-text-stroke: 0px;
+        color: #ea375c;
+        /*    font-weight: bold;*/
+
+    }
+
+
+    .sns_menu {
+        display: none;
+    }
+
+
+    .gnb {
+        top: 150px;
+    }
+
+    .gnb > li {
+        clear: left;
+        clear: left;
+        width: 100%;
+
+    }
+
+    .gnb > li > a {
+        font-size: 32px;
+        color: #fff;
+        font-family: 'digital-7';
+        padding: 15px 0;
+    }
+
+    .gnb li a:hover {
+        color: #ea375c;
+    }
+
+    .text-block {
+        display: none;
+    }
+    
+
+    #footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        height: 150px;
+    }
+
+    .footerBox {
+        display: grid;
+        grid-template-rows: 1fr 1f;
+        width: auto;
+        height: 150px;
+        line-height: 55px;
+        margin-left: 70px;
+    }
+
+    .fnb {
+        margin-left: 15px;
+    }
+
+    .fnb ul li a {
+        font-size: 16px;
+    }
+
+    .address {
+        width: 780px;
+        height: auto;
+        margin-top: -25px;
+    }
+
+    .address ul li {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .address ul li a {
+        font-size: 16px;
+    }
+
+
+}

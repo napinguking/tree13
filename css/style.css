@@ -1,0 +1,456 @@
+/* ================== 폰트 정의 ================== */
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+body,
+html {
+    font-family: 'Noto Sans KR Light', sans-serif;
+/*    overflow: hidden;*/
+    height: 100%;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+.scroll-indicator {
+    display: none;
+}
+
+/* ================== 폰트 적용 구역 ================== */
+.text-box h1 {
+    font-family: 'SoukouMincho', serif;
+}
+
+.text-box p {
+    font-family: 'Noto Sans KR', serif;
+    font-weight: 200;
+}
+
+
+/* Responsive and fixed background video */
+/*
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+*/
+
+/* Overlay and menu block */
+#menuOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+    background: rgb(34, 111, 193, 90%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    transition: opacity 0.6s ease, background-color 0.6s ease;
+}
+
+#menuOverlay.visible {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Ensure image and text stack properly and shrink together */
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.menu-content img {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+}
+
+.menu-content .text {
+    max-width: 600px;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: background 0.5s ease;
+    z-index: 2;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 120px 40px 40px;
+}
+
+.intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.poster {
+    height: 650px;
+    object-fit: contain;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5px;
+}
+
+.text-box h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.text-box p {
+    font-size: 32px;
+    color: #fff;
+}
+
+
+.vertical-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 120px;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+}
+
+
+.vertical-menu li a {
+    font-family: 'FiraSansExtraCondensed-Bold', sans-serif;
+    font-size: 128px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    letter-spacing: 5px;
+    writing-mode: vertical-rl;
+}
+
+
+
+.vertical-menu li a:hover {
+    color: pink;
+    -webkit-text-fill-color: pink;
+    -webkit-text-stroke: 2px pink;
+}
+
+
+
+/* ========== Mobile ========== */
+/*
+@media (max-width: 767px) {
+    .vertical-menu,
+    .poster {
+        display: none !important;
+    }
+
+    .logo {
+        z-index: 999;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+
+}
+*/
+
+/* ========== Tablet ========== */
+/*
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .header-links,
+    .main-content,
+    .vertical-menu,
+    .poster {
+        display: none !important;
+    }
+    
+     .menu {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 60%;
+    font-size: 82px;
+    z-index: 7;
+}
+    .text-block {
+        top: 25%;
+    }
+
+    .text-block h2 {
+        font-size: 48px;
+    }
+
+
+    .text-block p {
+        font-size: 32px;
+    }
+    
+    .gnb {
+    position: absolute;
+    right: 75px;
+    top: 20px;
+    z-index: 8;
+    text-align: right;
+}
+
+
+
+}
+*/
+
+/**********************************/
+
+
+/*
+@media (max-width: 1440px) {
+    .poster {
+        height: 360px;
+    }
+*/
+
+
+/*
+
+    .text-block {
+        margin-top: 70px;
+    }
+*/
+
+/*
+
+    .text-block h1 {
+        font-size: 40px;
+    }
+
+    .text-block p {
+        font-size: 24px;
+    }
+
+
+
+    .vertical-menu li a {
+        font-size: 96px;
+    }
+*/
+
+
+}
+/*
+
+@media (max-width: 1023px) {
+    .poster {
+        height: 280px;
+    }
+
+    .text-block h1 {
+        font-size: 28px;
+    }
+
+    .text-block p {
+        font-size: 18px;
+    }
+
+    .vertical-menu li a {
+        font-size: 50px;
+        -webkit-text-stroke: 1px white;
+    }
+
+    .menu-overlay {
+        padding: 80px 20px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .vertical-menu {
+        flex-direction: row;
+        position: static;
+        gap: 30px;
+    }
+
+
+
+}
+*/
+
+/* ✅ PC에서만 표시 */
+@media (min-width: 1024px) {
+    .scroll-indicator {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: float 2s ease-in-out infinite;
+    }
+
+    .mouse {
+        width: 24px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .wheel {
+        width: 4px;
+        height: 8px;
+        background: white;
+        border-radius: 2px;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: wheelMove 1.5s infinite;
+    }
+
+    .chevrons-css {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        margin-top: 5px;
+    }
+
+    .chevron {
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+        transform: rotate(-45deg);
+
+    }
+
+    .chevron:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    /* 애니메이션 */
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: rotate(-45deg) translateY(0);
+            opacity: 1;
+        }
+
+        50% {
+            transform: rotate(-45deg) translateY(6px);
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translate(-50%, 0);
+        }
+
+        50% {
+            transform: translate(-50%, -10px);
+        }
+    }
+
+    @keyframes wheelMove {
+        0% {
+            top: 8px;
+            opacity: 1;
+        }
+
+        100% {
+            top: 20px;
+            opacity: 0;
+        }
+    }
+}

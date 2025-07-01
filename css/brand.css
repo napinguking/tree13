@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src:  url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+/****** left-vertical-menu ******/
+
+.left-vertical-menu {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    z-index: 2;
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+
+}
+
+
+
+.left-vertical-menu ul li {
+    float: left;
+    padding: 0 20px;
+}
+
+.left-vertical-menu ul li a {
+   font-size: 20px;
+    color: #fff; 
+}
+
+.left-vertical-menu ul li:nth-child(2) a {
+    color: #ea375c;
+    font-weight: bold;
+}
+
+.left-vertical-menu ul li:nth-child(1):hover a {
+    color: #ea375c;
+    font-weight: bold;
+}
+
+@media (min-width:1024px) {
+    .left-vertical-menu {
+        left: auto;
+        right: 60%;
+        top: 25px;
+        z-index: 10;
+        transform: rotate(0deg);
+        font-size: 24px;
+    }
+}
