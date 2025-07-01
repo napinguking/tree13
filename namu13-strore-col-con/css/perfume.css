@@ -1,0 +1,211 @@
+@charset"utf-8";
+
+
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src:  url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR Medium';
+    src: url('../fonts/NotoSansKR-Medium.ttf') format('opentype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #226FC1;
+}
+
+.poster {
+    height: calc(100vh - 200px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 모바일: 한줄 */
+    gap: 40px;
+    padding: 40px 31px 31px 31px;
+}
+
+
+
+.poster div a {
+    max-width: 250px;
+    display: block;
+    text-align: center;
+}
+
+.poster div:nth-child(2) a {
+    display: none;
+}
+.poster div:nth-child(3) a {
+    display: none;
+}
+.poster div:nth-child(7) a {
+    display: none;
+}
+
+.poster div:nth-child(8) a {
+    display: none;
+}
+
+.poster div:nth-child(9) a {
+    display: none;
+}
+
+.poster div:nth-child(10) a {
+    display: none;
+}
+
+.poster img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.poster > div > a > p {
+    font-family: 'Noto Sans KR';
+    font-weight: lighter;
+    text-align: left;
+}
+
+
+
+.poster > div > a > p:nth-child(3) {
+    font-family: 'Noto Sans KR Medium';
+}
+
+.pageBtn {
+    margin-top: -50px;
+    justify-self: center;
+    grid-column: span 2;
+    width: 150px;
+    height: 30px;
+}
+
+.pageBtn li {
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.pageBtn li:nth-child(2) {
+    background-color: pink;
+}
+
+.lbtn::after {
+    content: "<";
+    color: #fff
+}
+
+.rbtn::before {
+    content: ">";
+    color: #fff
+}
+
+
+/********태블릿*********/
+@media screen and (min-width: 700px) {
+    .poster {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* 모바일: 한줄 */
+        gap: 40px;
+        padding: 38px 77px 31px 77px;
+    }
+
+    .poster div:nth-child(10) a {
+        display: none;
+    }
+
+    .poster div:nth-child(9) a {
+        display: block;
+    }
+
+    .poster div:nth-child(7) a {
+        display: block;
+    }
+
+    .poster div:nth-child(8) a {
+        display: block;
+    }
+
+    .pageBtn {
+        justify-self: center;
+        grid-column: span 3;
+        width: 150px;
+        height: 30px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********PC*********/
+
+@media screen and (min-width: 1024px) {
+    .poster {
+        height: calc(100vh - 200px);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        /* 모바일: 한줄 */
+        gap: 40px;
+        padding: 40px 270px 31px 31px;
+    }
+
+
+    .poster div:nth-child(10) a {
+        display: block;
+    }
+
+    .poster div:nth-child(9) a {
+        display: block;
+    }
+
+    .pageBtn {
+        padding-top: 50px;
+        justify-self: center;
+        grid-column: span 5;
+        width: 150px;
+        height: 30px;
+    }
+    .poster div a img{
+        min-width: 160px;
+    }
+    
+    .menu li:nth-child(3) a {
+        color: #f4acbb;
+    }
+}
