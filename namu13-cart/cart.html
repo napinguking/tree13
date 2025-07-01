@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>장바구니</title>
+    <link rel="icon" href="../img/tree13_favicon.svg" type="img/tree13_favicon.svg">
+    <link rel="stylesheet" href="../css/black_header.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="skipnav" class="hidden">
+        <h3>영역별 바로 가기</h3>
+        <ul>
+            <li><a href="#header">첫페이지 바로가기</a></li>
+            <li><a href="#lnb">메뉴 바로가기</a></li>
+            <li><a href="#cart-container">장바구니 리스트 바로가기</a></li>
+            <li><a href="#footer">푸터내용바로가기</a></li>
+        </ul>
+    </nav>
+    <header class="header1" id="header1">
+        <h1 class="logo"><a href="../index.html"><img src="img/13_logo.png" alt="로고">
+            </a></h1>
+        <h1 class="logo2"><a href="../index.html"><img src="img/tree13-logo-w.png" alt="로고">
+            </a></h1>
+    </header>
+    <nav id="lnb"></nav>
+    <div class="hamburger" id="hamburger"></div>
+
+  
+        <section class="cart-container" id="cart-container">
+            <div class="check-left">
+                <h2 class="cart-title">CART</h2>
+                <div class="cart-header">
+                    <label class="check-all">
+                        <input type="checkbox" class="check-all-input" checked />
+                    </label>
+                    <span class="header-title">상품 정보</span>
+                    <span class="header-title price-title">주문금액</span>
+                </div>
+
+
+
+                <ul class="cart-list">
+                    <li class="cart-item">
+                        <label class="cart-check">
+                            <input type="checkbox" checked>
+                        </label>
+                        <img src="img/1.png" alt="mtb club" class="cart-thumb" />
+                        <div class="cart-info">
+                            <p class="cart-name">mtb club (A3 포스터)</p>
+                            <p class="cart-price" data-price="12000">12,000원</p>
+                            <div class="cart-quantity">
+                                <button>-</button>
+                                <input type="text" value="2" />
+                                <button>+</button>
+                            </div>
+                            <div class="cart-row total-price-row">
+                                <span class="label">주문금액</span>
+                                <span class="price">24,000 <small>원</small></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="cart-item">
+                        <label class="cart-check">
+                            <input type="checkbox" checked>
+                        </label>
+                        <img src="img/3.jpeg" alt="marine" class="cart-thumb" />
+                        <div class="cart-info">
+                            <p class="cart-name">marine (폰케이스)</p>
+                            <p class="cart-price" data-price="15000">15,000원</p>
+                            <div class="cart-quantity">
+                                <button>-</button>
+                                <input type="text" value="1" />
+                                <button>+</button>
+                            </div>
+                            <div class="cart-row total-price-row">
+                                <span class="label">주문금액</span>
+                                <span class="price">15,000 <small>원</small></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-total-box">
+                <div class="cart-summary">
+                    <p>총 상품 금액 <span>39,000원</span></p>
+                    <p>배송비 <span>0원 <s>3,000원</s> </span></p>
+                </div>
+                <div class="cart-final">
+                    <p>총 결제 예정 금액 <span class="final-price">39,000 <small>원</small></span></p>
+                </div>
+                <button class="btn-buy">구매하기</button>
+            </div>
+        </section>
+
+        <footer id="footer"></footer>
+
+    <script src="../js/header.js"></script>
+    <script src="js/black_script.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="js/button.js"></script>
+
+</body>
+</html>
+
