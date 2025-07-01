@@ -1,0 +1,401 @@
+@charset"utf-8";
+
+
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/****** left-vertical-menu ******/
+
+.left-vertical-menu {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    z-index: 2;
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+
+}
+
+
+
+.left-vertical-menu ul li {
+    float: left;
+    padding: 0 20px;
+}
+
+.left-vertical-menu ul li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.left-vertical-menu ul li:hover a {
+    color: #f4acbb;
+    font-weight: bold;
+}
+
+/* 1. intro-section (작가 소개) */
+
+
+.intro-section {
+    background-color: #226fc1;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.intro-inner {
+    margin: 30px auto;
+    /* 중앙 정렬 */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.intro-title {
+    max-width: 100vw;
+    padding-top: 80px;
+    color: #fff;
+    font-family: 'SoukouMincho', serif;
+    text-align: center;
+    grid-row: 1;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.intro-text {
+    padding-bottom: 30px;
+    color: #fff;
+    font-family: 'Noto Sans KR', serif;
+    grid-row: 3;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: justify
+}
+
+.intro-text > p {
+    font-size: 16px;
+}
+
+.profile-img-wrap {
+    grid-row: 2;
+   
+}
+
+.profile-img-wrap img {
+    margin-left: 70px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 2. media-section (영상 + 작품 + 컨택트) */
+.media-section {
+    background-color: #b3dcff;
+    padding-top: 40px;
+}
+
+.video-box iframe {
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.artworks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.artworks img {
+    width: 100%;
+}
+
+.contact {
+    text-align: center;
+
+}
+
+.contact h3 {
+    font-family: 'digital-7', sans-serif;
+    font-weight: 500;
+    font-size: 32pt;
+    margin-bottom: 16px;
+    margin-top: 50px;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    /* 위아래 간격 */
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    display: flex;
+    flex-direction: column;
+    /*  align-items: center;*/
+}
+
+/*
+
+*/
+.contact-icons a:first-child img {
+    width: 195px;
+}
+
+.contact-icons a:last-child img {
+    width: 232px;
+    margin-bottom: 181px;
+    /* 원하는 마진값 */
+}
+
+
+
+/***************태블릿***************/
+
+
+@media (min-width: 700px) {
+
+    .intro-inner {
+        padding: 60px 80px;
+        /* 태블릿 이상에서는 더 여유 있게 */
+    }
+
+    /* 1. 인트로 섹션 폰트/간격 조절 */
+    .intro-title {
+        padding-top: 30px;
+        padding-left: 30px;
+        font-size: 64px;
+        text-align: center;
+    }
+
+    .intro-text {
+        margin: 0 auto;
+        width: 390px;
+    }
+
+    .intro-text p {
+        margin-top: -20px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .profile-img-wrap img {
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+        transform: translateX(60px);
+    }
+
+    /* 2. 비디오 여백 유지 + 반응형 */
+    .video-box iframe {
+        margin: 0 40px;
+        width: calc(100% - 80px);
+        aspect-ratio: 16 / 9;
+    }
+
+    /* 3. 아트웍: 3열 배치 */
+    .artworks {
+        margin-top: 57px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 40px;
+    }
+
+    .artworks img {
+        width: 100%;
+    }
+
+    /* 4. Contact 섹션 */
+    .contact {
+        text-align: center;
+    }
+
+    .contact h3 {
+        font-size: 48pt;
+       margin-top: 80px;
+    }
+
+    .contact-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .contact-icons a:first-child img {
+        width: 298px;
+    }
+
+    .contact-icons a:last-child img {
+        width: 353px;
+        margin-bottom: 100px;
+        /* 원하는 마진값 */
+    }
+}
+
+
+/****************pc사이즈****************/
+
+@media (min-width: 1024px) {
+    .intro-section {
+        height: calc(100vh -100px);
+    }
+
+    /* 인트로 영역: 텍스트/이미지 좌우 배치 */
+
+    .intro-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 60px;
+        padding: 80px;
+        max-width: 1280px;
+        margin: 0 auto;
+        transform: translateX(-150px);
+    }
+
+
+    .intro-title {
+        padding-left: 100px;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        align-self: end;
+        font-size: 94px;
+        margin: 70px 0 40px;
+        margin-right: -80px;
+    }
+
+    .intro-text {
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+        line-height: 1.8;
+        margin-right: -65px;
+        width: 400px;
+    }
+
+    .intro-text > p {
+        font-size: 20px;
+    }
+
+    .profile-img-wrap {
+        transform: translateX(100px);
+        padding-top: 100px;
+        grid-column: 3 / 5;
+        grid-row: 1 / 4;
+    }
+
+    .profile-img-wrap img {
+        /*      padding-top: 100px;*/
+        max-width: 700px;
+        height: auto;
+        /*    object-fit: contain;*/
+    }
+
+    /* 비디오 영역 */
+    .video-box iframe {
+        margin: 0 auto;
+        max-width: 1280px;
+        width: 100%;
+        aspect-ratio: 16/9;
+        display: block;
+    }
+
+    /* 아트웍: 4열 */
+    .artworks {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 60px 80px;
+    }
+
+    .artworks img {
+        width: 100%;
+    }
+
+    /* CONTACT 섹션 */
+
+    .contact h3 {
+        font-size: 48pt;
+        margin-top: 80px;
+    }
+
+    .contact-icons {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* ← 두 개 나란히 배치 */
+        justify-content: center;
+        /* 가운데 정렬 */
+        column-gap: 40px;
+        /* 아이콘 사이 간격 */
+        margin-top: 40px;
+        margin-bottom: 162px;  
+
+    }
+    
+
+    .contact-icons a:first-child img {
+        width: 298px;
+    }
+
+    .contact-icons a:last-child img {
+        width: 353px;
+        margin-bottom: 0;
+
+    }
+
+    .left-vertical-menu {
+        left: auto;
+        right: 60%;
+        top: 25px;
+        z-index: 10;
+        transform: rotate(0deg);
+        font-size: 24px;
+    }
+
+    .menu li:nth-child(1) a {
+        color: #f4acbb;
+    }
+}
+
+/* 공통 등장 애니메이션 설정 */
+.scroll-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
