@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="icon" href="../img/tree13_favicon.svg" type="img/tree13_favicon.svg">
+    <link rel="stylesheet" href="../css/black_header.css">
+    <link rel="stylesheet" href="css/mypage.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+     <nav id="skipnav" class="hidden">
+        <h3>영역별 바로 가기</h3>
+        <ul>
+            <li><a href="#header1">첫페이지 바로가기</a></li>
+            <li><a href="#lnb">메뉴 바로가기</a></li>
+            <li><a href="#main">본문내용 바로가기</a></li>
+            <li><a href="#filter-nav">내비게이션바 바로가기</a></li>
+            <li><a href="#footer">푸터내용 바로가기</a></li>
+        </ul>
+    </nav>
+<header class="header1" id="header1">
+    <h1 class="logo"><a href="../index.html"><img src="img/13_logo.png" alt="로고">
+    </a></h1>
+    <h1 class="logo2"><a href="../index.html"><img src="img/tree13-logo-w.png" alt="로고">
+    </a></h1>
+</header>
+<nav id="lnb"></nav>
+<div class="hamburger" id="hamburger"></div>
+
+    <!-- 본문 -->
+  <div class="wrap">
+    <h2 class="cart-title">MY PAGE</h2>
+
+    <main class="mypage-container" id="main">
+      <!-- 왼쪽 (프로필 + 구매내역) -->
+      <section class="mypage-left">
+        <div class="mypage-profile">
+          <div class="profile-img-wrap">
+            <img src="img/profile_edit.png" alt="프로필" class="profile-img">
+            
+          </div>
+          <h2 class="username">S2토끼공듀S2</h2>
+          <p class="info">연락처 <span class="info-status complete">등록완료</span></p>
+          <p class="info">배송지 <span class="info-status missing">미등록</span></p>
+          <button class="btn-edit">정보수정</button>
+        </div>
+
+        <div class="mypage-history">
+          <h3>구매내역</h3>
+          <p class="empty-msg">최근 구매내역이 없습니다</p>
+        </div>
+      </section>
+
+      <!-- 오른쪽 (관심상품 목록) -->
+      <aside class="mypage-wishlist">
+        <h3>관심상품 목록</h3>
+        <ul class="wishlist-list">
+          <li class="wishlist-item">
+            <img src="img/1.png" alt="상품1">
+            <div class="item-info">
+              <p class="item-name">mtb club (A3 포스터)</p>
+              <p class="item-price">12,000원</p>
+            </div>
+            <button class="btn-delete">×</button>
+          </li>
+          <li class="wishlist-item">
+            <img src="img/3.jpg" alt="상품2">
+            <div class="item-info">
+              <p class="item-name">mtb club (A3 포스터)</p>
+              <p class="item-price">35,000원</p>
+            </div>
+            <button class="btn-delete">×</button>
+          </li>
+          <li class="wishlist-item">
+            <img src="img/4.jpg" alt="상품3">
+            <div class="item-info">
+              <p class="item-name">mtb club (A3 포스터)</p>
+              <p class="item-price">15,000원</p>
+            </div>
+            <button class="btn-delete">×</button>
+          </li>
+        </ul>
+        <button class="btn-cart">장바구니 담기</button>
+      </aside>
+    </main>
+        <footer id="footer"></footer>
+
+    </div>
+    <script src="../js/header.js"></script>
+    <script src="js/black_script.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="js/button.js"></script>
+    
+</body>
+
+</html>
+<link rel="stylesheet" href="../namu13-mypage/mypage.html">
+

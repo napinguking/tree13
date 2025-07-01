@@ -1,0 +1,478 @@
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR Medium';
+    src: url('../fonts/NotoSansKR-Medium.ttf') format('opentype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR';
+    background-color: #f6f6f6;
+    
+}
+
+
+h2.cart-title {
+    font-family: 'digital-7', sans-serif;
+    text-align: center;
+    font-size: 32px;
+    margin: 80px 0 10px;
+    font-weight: normal;
+}
+
+.mypage-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 360px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* 프로필 영역 */
+.mypage-profile {
+    padding: 30px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.profile-img-wrap {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+.profile-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #226FC1;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.info {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.info-status.complete {
+    color: #226FC1;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.info-status.missing {
+    color: #EA375C;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.btn-edit {
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 6px 16px;
+    background: #226FC1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 구매내역 */
+.mypage-history {
+    width: 260px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    margin:  20px auto;
+}
+
+.mypage-history h3,
+.mypage-wishlist h3 {
+    font-family: 'Noto Sans KR Medium';
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.empty-msg {
+    font-size: 14px;
+    color: #3c3c3c;
+    position: relative;
+    left: 58px;
+    top: 55px;
+}
+
+/* 관심상품 */
+.mypage-wishlist {
+    width: 260px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    height: 520px;
+    margin: 0 auto;
+}
+
+.wishlist-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #848484;
+    gap: 16px;
+}
+
+.wishlist-item img {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 14px;
+}
+
+.item-price {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #848484;
+    cursor: pointer;
+}
+
+.btn-cart {
+    width: 150px;
+    height: 40px;
+    background: #226FC1;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.empty-wishlist-msg {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+/* 태블릿 */
+@media (min-width: 700px) and (max-width: 1023px) {
+ 
+    .mypage-container {
+        width: 620px;
+    }
+    
+    h2.cart-title {
+        font-size: 32px;
+ 
+    }
+
+
+    .mypage-profile {
+        padding: 20px 0 10px;
+        width: 620px;
+        height: 240px;
+        position: relative;
+        border-bottom: 1px solid #3c3c3c;
+    }
+
+    .profile-img-wrap {
+        width: 150px;
+        height: 150px;
+        margin: 0;
+        /*    flex-shrink: 0;*/
+    }
+
+    .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .username {
+        font-size: 28px;
+        font-weight: bold;
+        margin: -150px 0 10px 0;
+    }
+
+    .info {
+        font-size: 18px;
+        padding: 5px 0;
+        text-align: left;
+        width: 195px;
+        margin: 0 auto;
+    }
+
+
+    .btn-edit {
+        position: absolute;
+        right: 8px;
+        bottom: 20px;
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .mypage-history { 
+        padding: 20px 0 10px;
+        width: 620px;
+    }
+    
+    .mypage-wishlist {
+        width: 620px;
+        height: 620px;
+        padding: 20px 0 10px;
+    }
+
+    .mypage-history {
+        height: 300px;
+    }
+
+
+    .mypage-history h3,
+    .mypage-wishlist h3 {
+        font-size: 22px;
+        padding-left: 30px;
+    }
+
+    .empty-msg {
+        font-size: 18px;
+        left: 190px;
+        top: 95px;
+    }
+
+    .wishlist-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+    }
+
+
+    .wishlist-item img {
+        width: 100px;
+    }
+
+
+    .wishlist-item {
+        padding-top: 20px;
+        margin: 0 auto;
+        width: 530px;
+    }
+    .item-name {
+        font-size: 16px;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    .btn-delete {
+        font-size: 20px;
+    }
+
+    .btn-cart {
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+        margin-left: 210px;
+        margin-top: 30px;
+    }
+}
+
+
+/* PC */
+@media (min-width: 1024px) {
+    h2.cart-title {
+        width: 1080px;
+        font-size: 48px;
+        margin: 110px auto 40px;
+        text-align: left;
+    }
+
+    .mypage-container {
+        width: 1080px;
+        height: 700px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+
+
+    .mypage-profile {
+        width: 600px;
+        height: 220px;
+        padding: 30px 20px;
+        position: relative;
+        border-bottom: 1px solid #3c3c3c;
+    }
+
+    .profile-img-wrap {
+        width: 160px;
+        height: 160px;
+        margin: 0;
+        /*    flex-shrink: 0;*/
+    }
+
+    .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .username {
+        font-size: 32px;
+        font-weight: bold;
+        margin: -160px 0 20px 0;
+    }
+
+    .info {
+        font-size: 20px;
+        padding: 5px 0;
+        text-align: left;
+        width: 195px;
+        margin: 0 auto;
+    }
+
+
+    .btn-edit {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        width: 200px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .mypage-history {
+        width: 560px;
+        height: 300px;
+    }
+
+
+    .mypage-wishlist {
+        width: 380px;
+        height: 582px;
+        padding: 40px;
+        margin-top: 20px;
+    }
+
+
+
+    .mypage-history h3,
+    .mypage-wishlist h3 {
+        font-size: 24px;
+    }
+
+    .empty-msg {
+        font-size: 20px;
+        left: 185px;
+        top: 105px;
+    }
+
+    .wishlist-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+    }
+
+
+    .wishlist-item img {
+        width: 100px;
+    }
+
+
+
+    .item-name {
+        font-size: 16px;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    .btn-delete {
+        font-size: 20px;
+    }
+
+    .btn-cart {
+        width: 200px;
+        height: 55px;
+        font-size: 18px;
+        margin-left: 65px;
+        margin-top: 30px;
+    }
+    
+    .gnb {
+        display: none;
+    }
+}
