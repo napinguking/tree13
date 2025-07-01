@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src:  url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR Regular';
+}
+
+
+#section {
+    height: 860px;
+    margin-top: 100px;
+
+}
+
+.intro-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.poster {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.poster img {
+    width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro-section h2 {
+    font-size: 22px;
+    font-family: 'SoukouMincho', serif;
+    font-weight: 100;
+    width: 240px;
+    padding-top: 20px;
+    color: #3c3c3c;
+}
+
+.intro-text {
+    font-size: 16px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.intro-text-group {
+    width: 230px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+
+.btn,
+.btn2 {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*********************************/
+
+.auto-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.poster2 {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.poster2 img {
+    width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.auto-section h2 {
+    font-size: 22px;
+    font-family: 'SoukouMincho', serif;
+    font-weight: 100;
+    padding-top: 20px;
+    color: #3c3c3c;
+}
+
+.auto-text {
+    font-size: 16px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.auto-text-group {
+    width: 250px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+/******************************************/
+
+@media (min-width: 700px) {
+
+    .intro-section,
+    .auto-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 40px;
+        gap: 60px;
+        /*    padding: 45px 0;*/
+        flex-direction: row;
+    }
+
+    .intro-section {
+        padding-top: 60px;
+    }
+
+    .poster,
+    .poster2 {
+        width: 230px;
+        flex-shrink: 0;
+        margin: 0;
+        /*      margin-left: 150px;*/
+    }
+
+    .intro-text-group,
+    .auto-text-group {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+        /*    margin-left: -150px;*/
+    }
+
+    .intro-section h2,
+    .auto-section h2 {
+        width: 300px;
+        font-size: 36px;
+    }
+
+    .intro-text,
+    .auto-text {
+        font-size: 20px;
+    }
+
+    .btn,
+    .btn2 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+
+
+}
+
+@media (min-width: 1024px) {
+
+/*
+    html,
+    body {
+        overflow-y: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+*/
+
+    /* 공통 */
+    .intro-section,
+    .auto-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px 0;
+        gap: 50px;
+    }
+
+    .intro-section {
+        margin-left: -350px;
+       padding-top: 80px;
+    }
+
+    .auto-section {
+        padding-top: 0;
+        margin-right: -300px;
+    }
+
+    .poster,
+    .poster2 {
+        width: 240px;
+        margin: 0;
+    }
+
+    .intro-text-group,
+    .auto-text-group {
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        margin: 0;
+    }
+
+    .intro-text-group {
+        margin-top: 60px;
+    }
+
+    .auto-text-group {
+        margin-bottom: 100px;
+        text-align: right;
+    }
+
+    .intro-section h2,
+    .auto-section h2 {
+        font-size: 36px;
+    }
+
+    .auto-section h2 {
+        width: 345px;
+    }
+
+    .intro-text,
+    .auto-text {
+        font-size: 18px;
+    }
+
+
+    .btn,
+    .btn2 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* intro-section: 이미지 왼쪽 / 텍스트 오른쪽 */
+    .intro-section {
+        align-items: flex-start;
+        /* 이미지 상단 기준 */
+        flex-direction: row;
+        /* 기본 좌-우 */
+    }
+
+    /* auto-section: 텍스트 왼쪽 / 이미지 오른쪽 */
+    .auto-section {
+        align-items: flex-end;
+        /* 이미지 하단 기준 */
+        flex-direction: row-reverse;
+        /* 우-좌 반전 */
+    }
+}
