@@ -1,0 +1,445 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SoukouMincho';
+    src: url(../fonts/SoukouMincho.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url(../fonts/digital-7mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FiraSansExtraCondensed-Bold';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+
+/* 모바일 기본 구조 */
+#intro-section {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #EA375C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    min-height: auto;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.intro-poster {
+    width: 300px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.intro-text-group {
+    color: #fff;
+    width: 100%;
+    max-width: 600px;
+}
+
+.intro-h1 {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: 'SoukouMincho', serif;
+    margin-bottom: 10px;
+}
+
+.exhibition-info {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.intro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.intro-row span:first-child {
+    min-width: 80px;
+    font-weight: 400;
+}
+
+.intro-row span:last-child {
+    flex: 1;
+    text-align: left;
+}
+
+
+/* 예매하기 버튼 */
+.intro-buy {
+    width: 300px;
+    height: 60px;
+    background-color: #f4acbb;
+    -webkit-text-stroke: 0;
+    color: #ea375c !important;
+    font-size: 18px;
+    padding: 18px 115px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background 0.3s ease;
+    margin: 20px auto;
+}
+
+.quantity-box {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-size: 18px;
+    height: 30px;
+}
+
+.qty-btn {
+    background-color: #226FC1;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.qty-btn:hover {
+    background-color: #1a5db5;
+}
+
+.qty-num {
+    background-color: white;
+    color: #226FC1;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+/* 전시장 구조도 공통 스타일 */
+.structure-section {
+    width: 340px;
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.structure-img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+/* 지도 섹션 */
+.map-section {
+    width: 340px;
+    height: 305px;
+    text-align: center;
+    margin: -20px auto 50px;
+}
+
+
+.mobile-only {
+    display: inline;
+}
+
+.tablet-only,
+.pc-only {
+    display: none;
+}
+
+
+
+
+
+/* 태블릿 화면 (768px ~ 1023px) */
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+
+
+    .intro-section {
+        width: 700px;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 40px;
+    }
+
+    .intro-poster {
+        width: 350px;
+    }
+
+    .intro-h1 {
+        font-size: 42px;
+        width: 400px;
+        margin: 10px 0 -20px;
+
+    }
+
+    .exhibition-info {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .intro-text-group {
+        width: 400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        margin-left: -190px;
+    }
+
+    .intro-h1,
+    .exhibition-info {
+        grid-column: 1 / 3;
+        text-align: left;
+    }
+
+    .intro-text > .intro-row {
+        font-size: 16px
+    }
+
+    .intro-text {
+        display: contents;
+        /* 내부 요소가 grid에 직접 배치되게 함 */
+    }
+
+    /* 왼쪽 열: 전시 정보 4개 */
+    .intro-text > .intro-row:nth-child(1),
+    .intro-text > .intro-row:nth-child(2),
+    .intro-text > .intro-row:nth-child(3),
+    .intro-text > .intro-row:nth-child(4) {
+        grid-column: 1 / 3;
+        margin-bottom: -8px;
+    }
+
+    /* 오른쪽 열: 수량 + 예매하기 */
+    .intro-text > .row {
+        grid-column: 4 / 4;
+        grid-row: 4 / 6;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    .row .intro-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-right: 25px;
+    }
+
+
+
+    .intro-buy {
+        grid-column: 3 / 5;
+        grid-row: 5 / 8;
+        margin-left: -55px;
+        width: 240px;
+        font-size: 16px;
+        padding: 18px 90px;
+    }
+
+    .tablet-only {
+        display: inline;
+    }
+
+    .mobile-only,
+    .pc-only {
+        display: none;
+    }
+    
+    .structure-section {
+    width: 650px;
+}
+    .map-section {
+        width: 650px;
+        height: 500px;
+    text-align: center;
+       margin: -20px auto 50px;
+}
+}
+
+
+/* PC 화면 (1024px 이상) */
+@media screen and (min-width: 1024px) {
+
+    /*
+    html,
+    body {
+        overflow-y: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+*/
+
+    .intro-section {
+        height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 60px 100px;
+    }
+
+    .intro-poster {
+        width: 450px;
+        margin-right: 60px;
+    }
+
+
+    .intro-h1 {
+        font-size: 64px;
+        font-weight: 100;
+        font-family: 'SoukouMincho', serif;
+        margin-bottom: 10px;
+    }
+
+    .exhibition-info {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .intro-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 600px;
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .intro-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 55px;
+    }
+
+    .intro-row span:first-child {
+        min-width: 80px;
+        font-weight: 400;
+    }
+
+    .intro-row span:last-child {
+        flex: 1;
+        text-align: left;
+    }
+
+    .row {
+        margin-top: 50px;
+    }
+
+
+    /* 예매하기 버튼 */
+    .intro-buy {
+        width: 280px;
+        font-size: 20px;
+        padding: 16px 102px;
+        margin-left: -5px;
+    }
+
+    .quantity-box {
+        font-size: 20px;
+    }
+
+    .qty-btn {
+        font-size: 20px;
+    }
+
+
+
+    .qty-num {
+        font-size: 20px;
+    }
+
+    .menu li:nth-child(4) a {
+        color: #f4acbb;
+    }
+
+    .pc-only {
+        display: inline;
+    }
+
+    .tablet-only,
+    .mobile-only {
+        display: none;
+    }
+    
+    .structure-section {
+    width: 1318px;
+}
+    .map-section {
+        width: 1318px;
+        height: 600px;
+    text-align: center;
+        margin: 10px auto 60px;
+}
+}

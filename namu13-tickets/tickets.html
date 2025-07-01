@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>tickets</title>
+    <link rel="icon" href="../img/tree13_favicon.svg" type="img/tree13_favicon.svg">
+    <link rel="stylesheet" href="../css/pink_header.css">
+    <link rel="stylesheet" href="css/tickets.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <nav id="lnb"></nav>
+    <div class="hamburger" id="hamburger"></div>
+    <section id="intro-section">
+        <div class="intro-section">
+            <img src="img/blue_vacation.jpg" alt="포스터" class="intro-poster">
+
+            <div class="intro-text-group">
+                <h1 class="intro-h1">BLUE VACATION</h1>
+                <p class="exhibition-info">:짧지만 강렬한 우리의 여름</p>
+                <div class="intro-text">
+                    <div class="intro-row"><span>장소</span><span>서울시 종로 69</span></div>
+                    <div class="intro-row"><span>기간</span><span>2025.07.01 ~ 2025.08.01</span></div>
+                    <div class="intro-row"><span>관람연령</span><span>전체연령가</span></div>
+                    <div class="intro-row"><span>가격</span><span><strong>15,000원</strong></span></div>
+                    <div class="row">
+                        <div class="intro-row">
+                            <span>수량</span>
+                            <span>
+                                <div class="quantity-box">
+                                    <button class="qty-btn minus">-</button>
+                                    <span class="qty-num" id="qty">0</span>
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="intro-buy">예매하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 전시장 구조도 섹션 -->
+<section class="structure-section">
+  <img src="img/info_pc.png" alt="전시장 구조도 - PC" class="structure-img pc-only">
+  <img src="img/info_tablet.png" alt="전시장 구조도 - 태블릿" class="structure-img tablet-only">
+  <img src="img/info_mobile.png" alt="전시장 구조도 - 모바일" class="structure-img mobile-only">
+</section>
+
+<!-- 종로 YMCA 지도 섹션 -->
+<section class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.3086945081014!2d126.98576511531156!3d37.570840079795176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ec3f7b3d5b%3A0x5cd72803e3da0f29!2sYMCA%20서울종로회관!5e0!3m2!1sko!2skr!4v1719710000000"
+    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+    <footer id="footer"></footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="js/button.js"></script>
+</body></html>
