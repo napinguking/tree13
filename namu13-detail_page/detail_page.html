@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>전시소개</title>
+    <link rel="icon" href="../img/tree13_favicon.svg" type="img/tree13_favicon.svg">
+    <link rel="stylesheet" href="../css/black_header.css">
+    <link rel="stylesheet" href="css/detail_page.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="skipnav" class="hidden">
+        <h3>영역별 바로 가기</h3>
+        <ul>
+            <li><a href="#header1">첫페이지 바로가기</a></li>
+            <li><a href="#lnb">메뉴 바로가기</a></li>
+            <li><a href="#intro-section">상품소개 바로가기</a></li>
+            <li><a href="#filter-nav">내비게이션바 바로가기</a></li>
+            <li><a href="#page-1r">상품상세내용 바로가기</a></li>
+            <li><a href="#page-2">리뷰 바로가기</a></li>
+            <li><a href="#page-3">제품문의 바로가기</a></li>
+            <li><a href="#footer">푸터내용 바로가기</a></li>
+        </ul>
+    </nav>
+    <header class="header1" id="header1">
+        <h1 class="logo"><a href="../index.html"><img src="img/13_logo.png" alt="로고">
+            </a></h1>
+        <h1 class="logo2"><a href="../index.html"><img src="img/tree13-logo-w.png" alt="로고">
+            </a></h1>
+    </header>
+    <nav id="lnb"></nav>
+    <div class="hamburger" id="hamburger"></div>
+
+    <div class="wrap">
+        <!-- 🔵 INTRO SECTION -->
+        <section id="intro-section">
+            <div class="intro-section">
+                <img src="img/mtb_ps.png" alt="mtb club 포스터" class="product-image">
+
+                <div class="product-details">
+                    <h2 class="product-title">mtb club (A3 포스터)</h2>
+                    <p class="product-price">12,000원</p>
+
+                    <div class="product-shipping">
+                        <p><strong>배송방법</strong> 택배 (CJ 대한통운)</p>
+                        <p><strong>배송비</strong> 3,000원 (30,000원 이상 구매 시 무료)</p>
+                    </div>
+                </div>
+
+                <!-- 수량 & 구매 버튼 영역 -->
+                <div class="product-actions">
+                    <div class="quantity">
+                        <div class="quantity-control">
+                            <span>수량</span>
+                            <button>-</button>
+                            <input type="text" value="0" />
+                            <button>+</button>
+                        </div>
+                        <p class="min-quantity">(최소주문량 1개 이상)</p>
+                    </div>
+
+                    <div class="button-row">
+                        <button class="buy-button">구매하기</button>
+                        <div class="sub-buttons">
+                            <button class="cart-button">장바구니</button>
+                            <button class="wishlist-button">관심상품</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- nav -->
+        <nav class="filter-nav" id="filter-nav">
+            <ul>
+                <li class="tab-1">제품상세</li>
+                <li class="tab-2">구매자 리뷰</li>
+                <li class="tab-3">제품문의</li>
+            </ul>
+        </nav>
+
+        <!-- 제품상세 -->
+        <article class="page-1" id="page-1">
+            <h1 class="page1-img"><img src="img/detail_page.jpg" alt=""></h1>
+        </article>
+        <!-- 구매자 리뷰 -->
+        <article class="page-2" id="page-2">
+            <h1 class="re_mobile"><img src="img/re_mobile.png" alt=""></h1>
+            <h1 class="re_tablet"><img src="img/re_tablet.png" alt=""></h1>
+            <h1 class="re_pc"><img src="img/re_pc.png" alt=""></h1>
+        </article>
+        <!-- 제품문의 -->
+        <article class="page-3" id="page-3">
+            <h1 class="qna_mobile"><img src="img/qna_mobile.png" alt=""></h1>
+            <h1 class="qna_tablet"><img src="img/qna_tablet.png" alt=""></h1>
+            <h1 class="qna_pc"><img src="img/qna_pc.png" alt=""></h1>
+        </article>
+        <!-- 관심상품 팝업 -->
+        <div id="wishlistPopup" class="popup-toast">
+            <p id="wishlistMessage"></p>
+        </div>
+
+        <!-- 장바구니 팝업 모달 -->
+        <div id="cartModal" class="modal-overlay">
+            <div class="modal-content">
+                <p>장바구니에 상품이 담겼습니다</p>
+                <div class="modal-buttons">
+                    <button id="continueBtn">계속 쇼핑하기</button>
+                    <a href="../namu13-cart/cart.html"><button id="goCartBtn">장바구니로 이동</button></a>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+
+    </div>
+
+    <script src="../js/header.js"></script>
+    <script src="js/black_script.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/button.js"></script>
+    <script src="../js/footer.js"></script>
+</body></html>
+
+

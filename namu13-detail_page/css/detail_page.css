@@ -1,0 +1,123 @@
+/*******************페이지1*****************/
+.page-1,
+.page-2,
+.page-3 {
+    background-color: #f6f6f6;
+    height: auto;
+}
+
+
+.page1-img {
+    width: 340px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.re_mobile {
+    width: 340px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.qna_mobile {
+    width: 340px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.page1-img img,
+.re_mobile img,
+.qna_mobile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.re_tablet,
+.re_pc,
+.qna_tablet,
+.qna_pc {
+    display: none;
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+
+    .page1-img {
+        width: 600px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    .re_tablet {
+        display: block;
+        width: 600px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    .qna_tablet {
+        display: block;
+        width: 600px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    .page1-img img,
+    .re_tablet img,
+    .qna_tablet img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .re_mobile,
+    .re_pc,
+    .qna_mobile,
+    .qna_pc {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .page1-img {
+        width: 1024px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+
+    .re_pc {
+        display: block;
+        width: 1024px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+
+    .qna_pc {
+        display: block;
+        width: 1024px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    
+    .page1-img img,
+    .re_pc img,
+    .qna_pc img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .re_mobile,
+    .re_tablet,
+    .qna_mobile,
+    .qna_tablet {
+        display: none;
+    }
+
+
+}
