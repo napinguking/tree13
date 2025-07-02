@@ -1,4 +1,4 @@
-const header = document.getElementById('header'); if (header) {header.innerHTML  = ` <h1 class="logo"><a href="../index.html"><img src="img/tree13-logo-w.png" alt="로고"></a></h1>`;}
+const header = document.getElementById('header'); if (header) {header.innerHTML  = ` <h1 class="logo"><a href="index.html"><img src="img/tree13-logo-w.png" alt="로고"></a></h1>`;}
 document.getElementById('lnb').innerHTML = `<ul class="menu">
             <li><a href="namu13-about/about.html">ABOUT</a></li>
             <li><a href="namu13-exhibit/exhibit.html">EXHIBIT</a></li>
