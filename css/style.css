@@ -56,18 +56,24 @@ html {
 
 
 /* Responsive and fixed background video */
-/*
 #bg-video {
     position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: none;
+    pointer-events: none;/* 기본값 */
+    width: 177.78vh;  /* 100vh * (16/9) */
+    height: 100vh;
 }
-*/
 
+/* 화면 비율이 더 넓을 경우 (ex: 데스크탑 가로 확장) */
+@media (min-aspect-ratio: 16/9) {
+    #bg-video {
+        width: 100vw;
+        height: 56.25vw;  /* 100vw * (9/16) */
+    }
 /* Overlay and menu block */
 #menuOverlay {
     position: fixed;
@@ -121,15 +127,7 @@ html {
     overflow: hidden;
 }
 
-#bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
+
 
 .overlay {
     position: absolute;
